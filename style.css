@@ -1,0 +1,151 @@
+/* Global */
+
+:root { /* Refencia o html, a primeria tag (index <html>) */
+
+    --dark-blue: #363f5f;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Como esta sendo feito a medida da caixa? */
+                            /*
+                                Com border-box a borda da caixa ja vai ser o tamanho 
+                                maximo, incluindo o padding..
+
+                                sem isso o padding + tamanho da caixa pode aumentar,
+                                por exeplo:
+                                Padding = 20;
+                                Tam. caixa = 100 + padding => 120.
+                            */
+}
+
+body {
+    background-color: #e2e6eb;
+    font-family: 'Montserrat', sans-serif; /* sans-serif fonte com mais curvas */
+
+}
+
+.container {
+    width: min(90vw, 700px);  /* se 90vw (pedaços do viewport for maior que 500 use 500, se não use 90vw*/
+
+    margin: auto; /* margem nas laterais/horizontal ajusta automatico no meio */
+}
+
+/* === Titles */
+
+h2 {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    color: var(--dark-blue);
+    font-weight: 600;
+}
+
+/* === Header */
+
+header {
+    background: #2d4a2d;
+    padding: 4rem 0 12rem 0; /*distancia em TOP, RIGHT, BOTTOM, LEFT */
+    text-align: center; /* Todo conteudo de texto no header ficara alinhado */
+}
+
+#logo {
+    color: white;
+    font-weight: 300; /*  Deixar a fonte fina */
+    opacity: 0.8;
+}
+
+/* === Balance */
+#balance {
+    margin-top: -8rem;
+}
+
+#balance h2 {
+    color: #f0f2f5;
+}
+
+/* === Cards */
+.card {
+    background-color: #f0f2f5;
+    padding: 1.5rem 2rem;
+    border-radius: 0.5rem;
+
+    margin-bottom: 2rem;
+
+    color: var(--dark-blue);
+}
+
+.card h3 {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.card p {
+    font-size: 2rem;
+    line-height: 2rem;
+    margin-top: 1rem;
+}
+
+.card.total {
+    background-color: rgb(110, 165, 73);
+    color: #f0f2f5;
+}
+
+/* === Transaction */
+/* === Table */
+#data-table {
+    width: 100%; /* Aproveitar 100% do espaço do container */
+    color: var(--dark-blue);
+    border-spacing: 1 2rem;
+    text-align: center;
+}
+
+table thead th:first-child,
+table tbody td:first-child { /*Buscando o primeiro th e td do thead*/
+    border-radius: 0.25rem 0 0 0.25rem;
+}
+
+table th {
+    padding: 0.75rem;
+    background-color: white;
+    font-weight: normal;
+    color: #969cb3;
+}
+
+table td {
+    padding: 0.25rem;
+    background-color: white;
+    font-weight: 600;
+    color: var(--dark-blue);
+}
+
+table tbody tr {
+    opacity: 0.7;
+}
+
+table tbody tr:hover {
+    opacity: 1;
+}
+
+td.description {
+    color: var(--dark-blue);
+}
+
+td.income {
+    color: #12a454;
+}
+
+td.expense {
+    color: rgb(233, 43, 43);
+}
+
+td.date {
+    font-weight: 500;
+}
+/* === Footer */
+footer {
+    text-align: center;
+    font-weight: 600;
+    padding: 6rem 0 4rem;
+
+    opacity: 0.8;
+}
